@@ -62,7 +62,7 @@
 (defconst latex-custom-packages
   '(
     auctex
-    (cdlatex :location local)
+    (cdlatex :location elpa)
     pdf-tools
     yasnippet
     ))
