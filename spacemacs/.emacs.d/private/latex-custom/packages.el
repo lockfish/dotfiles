@@ -64,7 +64,7 @@
     auctex
     (cdlatex :location elpa)
     pdf-tools
-    yasnippet
+    ;; yasnippet
     ))
 
 (defun latex-custom/post-init-auctex ()
@@ -124,7 +124,6 @@
     (setq TeX-auto-save t)
     (setq TeX-parse-self t)
     (setq TeX-show-compilation nil)
-    (define-key LaTeX-mode-map (kbd "<double-mouse-1>") 'pdf-sync-forward-search)
     ;; (setq-default TeX-master nil)
     ;; (add-hook 'reftex-load-hook '(lambda ()
     ;;                                (define-key reftex-mode-map "k" 'reftex-toc-previous)
@@ -233,22 +232,22 @@ AUTOLABEL
                                   (push '("PDF Tools" TeX-pdf-tools-sync-view) TeX-view-program-list))))
   )
 
-(defun latex-custom/post-init-yasnippet()
-  (setq yas-snippet-dirs
-        '("~/.emacs.d/private/snippets")
-        )
-  (yas-global-mode 1);; or M-x yas-reload-all if you've started YASnippet already.
-  (setq yas-indent-line 'fixed)
-  ;;(setq yas-also-auto-indent-first-line t)
-  ;; continued from post-init-company
-  ;; (define-key yas-minor-mode-map [tab] nil)
-  (define-key yas-minor-mode-map (kbd "TAB") nil)
+;; (defun latex-custom/post-init-yasnippet()
+;;  (setq yas-snippet-dirs
+;;        '("~/.emacs.d/private/snippets")
+;;        )
+;;  (yas-global-mode 1);; or M-x yas-reload-all if you've started YASnippet already.
+;;  (setq yas-indent-line 'fixed)
+;;  ;;(setq yas-also-auto-indent-first-line t)
+;;  ;; continued from post-init-company
+;;  ;; (define-key yas-minor-mode-map [tab] nil)
+;;  (define-key yas-minor-mode-map (kbd "TAB") nil)
 
-  ;; ;; (define-key yas-keymap [tab] 'tab-complete-or-next-field)
-  ;; (define-key yas-keymap (kbd "TAB") 'tab-complete-or-next-field)
-  ;; (define-key yas-keymap [(control tab)] 'yas-next-field)
-  ;; (define-key yas-keymap (kbd "C-g") 'abort-company-or-yas)
-  ;; ;; ;; end of conflict solver
-  )
+;;  ;; ;; (define-key yas-keymap [tab] 'tab-complete-or-next-field)
+;;  ;; (define-key yas-keymap (kbd "TAB") 'tab-complete-or-next-field)
+;;  ;; (define-key yas-keymap [(control tab)] 'yas-next-field)
+;;  ;; (define-key yas-keymap (kbd "C-g") 'abort-company-or-yas)
+;;  ;; ;; ;; end of conflict solver
+;;  )
 
 ;;; packages.el ends here
